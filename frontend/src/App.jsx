@@ -16,7 +16,7 @@ function App() {
    if (userType === 'student') return <Student />;
   if (userType === 'teacher') return <Teacher />;
   return (
-    <div className='font-[sora] flex flex-col items-center justify-evenly h-screen'>
+    <div className=' flex flex-col items-center justify-center h-screen gap-5'>
       <h1 className='bg-gradient-to-r from-[#7765DA] to-[#4D0ACD] text-white rounded-full p-[9px] gap-[7px] font-semibold text-[14px]'>
         Intervue Poll
       </h1>
@@ -24,7 +24,7 @@ function App() {
         Welcome to the <span className='font-semibold'>Live Polling System</span>
       </h1>
       <h2>Please select the role that best describes you to begin the live polling system</h2>
-      <div className='flex gap-6'>
+      <div className='flex gap-6 p-5'>
         <div
           className={`cursor-pointer border-[3px] pt-[15px] pb-[15px] pl-[25px] pr-[17px] shadow rounded-[10px] ${
             selectedUser === 'student' ? 'border-[#4D0ACD]' : 'border-[#D9D9D9]'

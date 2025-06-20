@@ -58,8 +58,8 @@ function Teacher() {
   if(show)return <PollHistory/>
 
   return (
-    <div className="p-6 space-y-6 max-w-2xl mx-auto">
-      <h1 className="bg-gradient-to-r from-[#7765DA] to-[#4D0ACD] text-white rounded-full px-4 py-2 font-semibold text-sm">
+    <div className="p-6 space-y-6 max-w-2xl mx-auto  ">
+      <h1 className="bg-gradient-to-r from-[#7765DA] to-[#4D0ACD] text-white rounded-full px-4 py-2 font-semibold text-sm text-center">
         Intervue Poll
       </h1>
 
@@ -89,7 +89,7 @@ function Teacher() {
         <textarea
           rows={4}
           placeholder="Type your question..."
-          className="w-full border p-2 rounded mb-4"
+          className="w-full border p-2 rounded mb-4 bg-[#F2F2F2]"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
         />
@@ -102,12 +102,13 @@ function Teacher() {
         <div className="space-y-2">
           {options.map((opt, idx) => (
             <div key={idx} className="flex items-center space-x-4">
+              <h2 className='bg-gradient-to-l from-[#8F64E1] to-[#4E377B] w-11 text-center rounded-full font-semibold text-white' >{idx + 1}</h2>
               <input
                 type="text"
                 value={opt.text}
                 onChange={(e) => handleOptionTextChange(idx, e.target.value)}
                 placeholder={`Option ${idx + 1}`}
-                className="w-full border p-2 rounded"
+                className="w-full border p-2 rounded bg-[#F2F2F2]"
               />
 
               <label className="flex items-center space-x-2">
@@ -135,17 +136,17 @@ function Teacher() {
           ))}
         </div>
 
+
+        <div className="mt-5 flex justify-between">
         <button
           onClick={addOption}
-          className="mt-2 text-sm text-blue-500 hover:underline"
+          className="mt-2 text-sm text-[#7451B6] border rounded p-2"
         >
           + Add another option
         </button>
-
-        <div className="mt-4">
           <button
             onClick={handleSubmit}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-gradient-to-r from-[#7765DA] to-[#1D68BD] text-white font-semibold text-[18px] pt-[17px] pb-[17px] pl-[70px] pr-[70px] gap-[10px] rounded-[34px]"
           >
             Ask Question
           </button>

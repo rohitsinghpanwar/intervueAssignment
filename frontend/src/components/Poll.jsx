@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import socket from '../socket/socket';
 import clock from '../assets/timer.png';
-
+import Chat from './Chat';
 function Poll() {
   const [poll, setPoll] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -164,6 +164,8 @@ function Poll() {
           Waiting for the teacher to ask a new question...
         </div>
       )}
+
+      <Chat/>
     </div>
   );
 }

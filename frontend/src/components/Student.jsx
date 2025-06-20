@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Poll from './Poll';
 import socket from '../socket/socket';
-
 function Student() {
   const [studentName, setStudentName] = useState('');
   const [pupil,setPupil]=useState()
@@ -60,7 +59,7 @@ function Student() {
 
       <button
         onClick={handleContinue}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-gradient-to-r from-[#8F64E1] to-[#1D68BD] text-white font-semibold text-[18px] pt-[17px] pb-[17px] pl-[70px] pr-[70px] gap-[10px] rounded-[34px] "
       >
         Continue
       </button>
